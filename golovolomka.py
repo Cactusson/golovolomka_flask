@@ -1,1 +1,1 @@
-from app import app
+from golovolomka import app
