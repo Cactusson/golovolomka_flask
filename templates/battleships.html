@@ -57,10 +57,14 @@
     .miss {
         background: url("/static/miss.png")no-repeat center center;
     }
+    a {
+    	color: red
+    }
     </style>
 </head>
 
 <body>
+    <p><a href="{{ url_for('index') }}">НАЗАД</a></p>
     <div id="board">
         <div id="messageArea"></div>
         <table>
