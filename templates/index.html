@@ -44,12 +44,12 @@
 </head>
 
 <body>
-    <img id="zero" src="zeroblur.jpg">
-    <img id="one" src="oneblur.jpg">
-    <img id="two" src="twoblur.jpg">
-    <img id="three" src="threeblur.jpg">
-    <img id="four" src="fourblur.jpg">
-    <img id="five" src="fiveblur.jpg">
+	<img id="zero" src="{{ url_for('static', filename='zeroblur.jpg') }}">
+    <img id="one" src="{{ url_for('static', filename='oneblur.jpg') }}">
+    <img id="two" src="{{ url_for('static', filename='twoblur.jpg') }}">
+    <img id="three" src="{{ url_for('static', filename='threeblur.jpg') }}">
+    <img id="four" src="{{ url_for('static', filename='fourblur.jpg') }}">
+    <img id="five" src="{{ url_for('static', filename='fiveblur.jpg') }}">
 </body>
 
 </html>
