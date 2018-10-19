@@ -29,22 +29,22 @@
     function showAnswer(eventObj) {
         var image = eventObj.target;
         var name = image.id;
-        name = name + ".jpg";
+        name = "/static/" + name + ".jpg";
         image.src = name;
 
     }
 
     function reblur(eventObj) {
-    	var image=eventObj.target
+        var image = eventObj.target
         var name = image.id;
-        name = name + "blur.jpg";
+        name = "/static/" + name + "blur.jpg";
         image.src = name
     }
     </script>
 </head>
 
 <body>
-	<img id="zero" src="{{ url_for('static', filename='zeroblur.jpg') }}">
+    <img id="zero" src="{{ url_for('static', filename='zeroblur.jpg') }}">
     <img id="one" src="{{ url_for('static', filename='oneblur.jpg') }}">
     <img id="two" src="{{ url_for('static', filename='twoblur.jpg') }}">
     <img id="three" src="{{ url_for('static', filename='threeblur.jpg') }}">
