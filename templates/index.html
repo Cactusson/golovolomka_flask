@@ -1,55 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>
-        image Guess
-    </title>
-    <style>
-    body {
-        margin: 20px;
-    }
-
-    img {
-        margin: 20px;
-    }
-    </style>
-    <script>
-    window.onload = init;
-
-    function init() {
-        var images = document.getElementsByTagName("img");
-        for (var i = 0; i < images.length; i++) {
-            images[i].onmouseover = showAnswer;
-            images[i].onmouseout = reblur;
-        }
-    };
-
-    function showAnswer(eventObj) {
-        var image = eventObj.target;
-        var name = image.id;
-        name = "/static/" + name + ".jpg";
-        image.src = name;
-
-    }
-
-    function reblur(eventObj) {
-        var image = eventObj.target
-        var name = image.id;
-        name = "/static/" + name + "blur.jpg";
-        image.src = name
-    }
-    </script>
+    <title>GOLOVOLOMKA</title>
 </head>
-
 <body>
-    <img id="zero" src="{{ url_for('static', filename='zeroblur.jpg') }}">
-    <img id="one" src="{{ url_for('static', filename='oneblur.jpg') }}">
-    <img id="two" src="{{ url_for('static', filename='twoblur.jpg') }}">
-    <img id="three" src="{{ url_for('static', filename='threeblur.jpg') }}">
-    <img id="four" src="{{ url_for('static', filename='fourblur.jpg') }}">
-    <img id="five" src="{{ url_for('static', filename='fiveblur.jpg') }}">
+    <p><a href="{{ url_for('blur') }}">КАРТИНКИ</a></p>
+    <p><a href="{{ url_for('battleships') }}">МОРСКОЙ БОЙ</a></p>
 </body>
-
 </html>
