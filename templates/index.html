@@ -17,8 +17,8 @@
 <body>
     <p><a href="{{ url_for('blur') }}"><img id="one" src="{{ url_for('static', filename='zeroblur.jpg') }}"></a></p>
     <p><a href="{{ url_for('battleships') }}"><img id="two" src="{{ url_for('static', filename='ships.jpg') }}"></a></p>
-    <audio id="music1" src="/static/balbal.mp3"></audio>
-    <audio id="music1" src="/static/robo.mp3"></audio>
+    <audio id="one" src="/static/balbal.mp3"></audio>
+    <audio id="two" src="/static/robo.mp3"></audio>
     <script>
     window.onload = init;
 
@@ -29,13 +29,16 @@
             images[i].onmouseout = musicoff;
         }
     };
-    function musicon(){
-    	var music=document.getElementsByTagName("audio");
-    	for (var i = 0; i < music.length; i++)  {
+    function musicon(eventObj){
+    	var music = document.getElementById(eventObj.id);
+    	// var music=document.getElementsByTagName("audio");
+    	// for (var i = 0; i < music.length; i++) 
+    	// if {
     	music.play();
     }
-    function moscioff(){
-    	audio.muted();
+    function moscioff(eventObj){
+    	var music = document.getElementById(eventObj.id);
+    	music.pause();
     }
     </script>
 </body>
